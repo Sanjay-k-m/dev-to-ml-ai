@@ -1,0 +1,29 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+.card {
+  width: 350px;
+  height: 350px;
+  background-image: url(https://images.pexels.com/photos/6151274/pexels-photo-6151274.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 4px double red;
+  border-radius: 12px;
+  color: white;
+}
+.title {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: double 12px yellow;
+  color: grey;
+}
+a:hover {
+  background-color:  green;
+}
+.card h3{
+    color: purple;
+    background-color: aqua;
+}

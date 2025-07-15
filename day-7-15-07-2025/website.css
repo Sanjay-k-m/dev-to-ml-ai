@@ -1,0 +1,31 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+nav{
+    background-color: #444;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    text-align: center;
+}

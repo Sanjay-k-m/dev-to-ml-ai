@@ -1,0 +1,48 @@
+h2 {
+  text-align: center;
+}
+.block {
+  display: block;
+  background-color: lightblue;
+  padding: 10px;
+  margin: 10px;
+  height:40px;
+}
+.inline-example {
+  display: inline;
+  background-color: lightgreen;
+  padding: 10px;
+  margin: 10px;
+}
+.inline-block {
+  display: inline-block;
+  background-color: lightcoral;
+  width: 120px;
+  height: 80px;
+  padding: 10px;
+  margin: 10px;
+}
+.none {
+  display: none;
+}
+.flex-container {
+  background-color: lightsalmon;
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  padding: 25px;
+}
+.flex-item {
+  background-color: #f3f3f3;
+  padding: 15px;
+  flex: 1;
+  text-align: center;
+}
+.box-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 
+display : block,inline,inline-block,none,flex
+*/

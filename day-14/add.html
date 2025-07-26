@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="no1" placeholder="Enter first number" />
+    <input type="text" id="no2" placeholder="Enter second number" />
+    <input type="text" id="res1" />
+
+    <p id="result"> </p>
+    <button onclick=addNumber()>ADD</button>
+
+    <script>
+        function addNumber() {
+            const n1 = Number(document.getElementById("no1").value)
+            const n2 = Number(document.getElementById("no2").value)
+            const result = n1 + n2
+            console.log("HEyyyyy"+result)
+            document.getElementById("result").innerText = result
+            document.getElementById("res1").placeholder = result
+
+
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

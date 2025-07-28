@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: lightblue;
+
+        }
+        .box{
+            /* background-color: ; */
+            border: 1px solid black;
+            margin: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="mainHeading">Welcome to DOM</h1>
+    <p class="text">This is One</p>
+    <p class="text">THis is Two</p>
+    <input type="text" name="username" value="user1">
+    <input type="text" name="username" value="user2">
+    <div id="selector-demo" class="highlight">This will change with query selector</div>
+    <!-- <div id="selector-demo" class="highlight">This will change with query selector</div> -->
+
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="note">Note 1</div>
+    <div class="note">Note 2</div>
+    <script>
+        const heading = document.getElementById("mainHeading")
+        heading.style.color = " green"
+        heading.textContent = "Updated Heading via getElementById"
+
+        const nameInput = document.getElementsByName("username")
+        nameInput[0].value = "updatedUser1"
+        nameInput[1].value = "updatedUser2"
+
+        const paragraphs = document.getElementsByTagName("p")
+        paragraphs[0].style.fontWeight = "bold"
+        paragraphs[1].style.color = "blue"
+        const boxes = document.getElementsByClassName("box")
+        boxes[0].style.backgroundColor = "lightgreen"
+        boxes[1].style.border = "2px dashed red"
+        const highlighted = document.querySelector(".highlight")
+        highlighted.innerHTML = "changed using querySelector"
+
+        const notes = document.querySelectorAll(".note")
+        notes.forEach((note, index) => {
+            note.style.color = "purple"
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+DOM
+methods:
+getElementById
+
+
+Document object Model
+Document : Entire page
+object:
+model:

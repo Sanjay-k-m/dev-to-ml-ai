@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        #output {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .highlight {
+            color: white;
+            background-color: green;
+            padding: 5px;
+
+        }
+
+        #mainHeading {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="mainHeading">Dom Manipulations</h1>
+    <input type="text" id="inputText" placeholder="Type something ...." />
+    <button onclick="updateHeading()">Change Heading</button>
+    <br><br>
+    <button onclick="addParagraph()">add Paragraph</button>
+
+    <button onclick="removeLastPara()">Remove Last Paragraph</button>
+    <div id="output">
+        <p>This is the first paragraph</p>
+    </div>
+    <script>
+        function updateHeading() {
+            const input = document.getElementById("inputText").value
+            const heading = document.getElementById("mainHeading")
+            heading.innerText = input || "Dom manipulations Demo"
+            heading.classList.add("highlight")
+        }
+        function addParagraph() {
+            const newPara = document.createElement("p")
+            newPara.innerText = "This is a new paragraph"
+            document.getElementById("output").appendChild(newPara)
+        }
+        function removeLastPara() {
+            const outputDiv = document.getElementById("output")
+            const paragraphs = outputDiv.getElementsByTagName("p")
+            console.log(paragraphs.length)
+            if (paragraphs.length > 0) {
+                outputDiv.removeChild(paragraphs[paragraphs.length - 1])
+            } else {
+                alert("No paragraphs...")
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 100px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Event Handling</h2>
+    <button id="clickButton">Click Me</button>
+    <p id="clickMessage"> </p>
+    <input type="text" id="nameInput" placeholder="Type your name....">
+    <p id="liveText"></p>
+    <div id="hoverBox">Hover over me</div>
+
+    <script>
+        document.getElementById("clickButton").addEventListener("click", function () {
+            document.getElementById("clickMessage").innerText = "You clicked the button"
+        })
+        document.getElementById("nameInput").addEventListener("input", function (event) {
+            const value = event.target.value
+            document.getElementById("liveText").innerText = "You typed :" + value
+        })
+        const hoverBox = document.getElementById("hoverBox");
+        hoverBox.addEventListener("mouseover", function () {
+            console.log("workinggggg")
+            hoverBox.style.backgroundColor = "orange"
+            hoverBox.innerText = "Mouse is over me"
+        })
+
+        hoverBox.addEventListener("mouseout", function () {
+            hoverBox.style.backgroundColor = "lightblue"
+            hoverBox.innerText = "Mouse Over Me"
+        })
+    </script>
+</body>
+
+</html>

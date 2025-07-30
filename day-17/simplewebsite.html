@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: azure;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007acc;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007acc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 15px;
+            border: none;
+            background-color: #007acc;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3;
+        }
+
+        button:hover {
+            background-color: #ca7a1f
+        }
+
+        #displayText {
+            margin-top: 30px;
+            font-size: 18px;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to simple website</h1>
+    <p>This is a sample one </p>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="showInput()">Show</button>
+    <div id="displayText"></div>
+    <script>
+        function showInput() {
+            const input = document.getElementById("userInput").value.trim();
+            const display = document.getElementById("displayText")
+            if (input === "") {
+                display.textContent = "Please Type something ..."
+                display.style.color = "red"
+            }
+            else{
+                display.textContent = input
+                display.style.color = "black"
+            }
+        }
+    </script>
+</body>
+
+</html>

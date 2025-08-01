@@ -1,0 +1,4 @@
+layout
+    container
+        row
+            col (max - 12 cols)

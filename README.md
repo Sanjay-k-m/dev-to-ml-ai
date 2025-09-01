@@ -1,4 +1,5 @@
 # 🚀 dev-to-ml-ai
+https://docs.google.com/presentation/d/1yVh2l9j7cthVz_Am4T6fuNYcwiouqx1x1Ej0lwk_3gQ/edit?usp=drive_link
 
 This repository documents my journey from **Full-Stack Developer** to **Machine Learning and AI Engineer**.
 
